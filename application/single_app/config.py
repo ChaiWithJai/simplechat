@@ -356,6 +356,19 @@ cosmos_agent_facts_container = cosmos_database.create_container_if_not_exists(
     partition_key=PartitionKey(path="/scope_id")
 )
 
+# Opportunity system containers
+cosmos_opportunities_container_name = "opportunities"
+cosmos_opportunities_container = cosmos_database.create_container_if_not_exists(
+    id=cosmos_opportunities_container_name,
+    partition_key=PartitionKey(path="/source/name")
+)
+
+cosmos_opportunity_sources_container_name = "opportunity_sources"
+cosmos_opportunity_sources_container = cosmos_database.create_container_if_not_exists(
+    id=cosmos_opportunity_sources_container_name,
+    partition_key=PartitionKey(path="/id")
+)
+
 def ensure_custom_logo_file_exists(app, settings):
     """
     If custom_logo_base64 or custom_logo_dark_base64 is present in settings, ensure the appropriate
