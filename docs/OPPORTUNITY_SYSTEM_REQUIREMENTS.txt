@@ -1,0 +1,20 @@
+# Additional Python dependencies for Opportunity Grounding System
+
+# RSS feed parsing
+feedparser>=6.0.10
+
+# Date parsing for flexible date format handling
+python-dateutil>=2.8.2
+
+# Already in main requirements.txt (verify):
+# - azure-cosmos
+# - requests
+# - Flask
+# - semantic-kernel>=1.32.1
+
+# Future dependencies (for production phases):
+# - APScheduler>=3.10.0  # For scheduled ingestion
+# - beautifulsoup4>=4.12.0  # For web scraping (already installed)
+# - playwright>=1.40.0  # For JavaScript-heavy sites (Phase 2)
+# - azure-functions>=1.18.0  # For Durable Functions (Phase 2)
+# - azure-functions-durable>=1.2.0  # For Durable Functions orchestration
